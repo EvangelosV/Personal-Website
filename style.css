@@ -1,0 +1,225 @@
+body {
+
+    font-family: Courier, monospace;
+    background-color: white;
+    color: black;
+}
+
+h1 {
+    color : black;
+    font-family: Courier, monospace;
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+.cont1 h2 {
+    opacity: 0;
+    transition: opacity 2s ease;
+    /* Vendor prefixes for better browser compatibility */
+    -webkit-transition: opacity 2s ease;
+    -moz-transition: opacity 2s ease;
+    -ms-transition: opacity 2s ease;
+    -o-transition: opacity 2s ease;
+}
+
+h2 {
+    color : black;
+    font-family: Courier, monospace;
+    font-weight: 200;
+}
+h3 {
+    color : black;
+    font-family: Courier, monospace;
+    font-weight: 300;
+}
+h4 {
+    color : black;
+    font-family: Courier, monospace;
+    font-weight: 200;
+}
+
+#vxlink {
+    color : black;
+    font-family: Courier, monospace;
+    font-weight: 200;
+}
+
+span {
+    color : black;
+    font-family: Courier, monospace;
+    font-weight: 200;
+}
+
+/* Initial state - hide elements before animation */
+.cont1 h2, .cont1 h1, .cont1 h4 {
+    opacity: 0; /* Start with elements invisible */
+    transition: opacity 1s ease; /* Smooth fade-in transition */
+}
+
+/* Class to make elements visible when added by JS */
+.visible {
+    opacity: 1 !important; /* Override initial opacity to show element */
+}
+
+/* Rest of the content sections will start invisible */
+.cont2, .cont3, .cont4, .cont5, .cont6, .contact, .icon-container, footer {
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.8s ease; /* Transition for fade-in effect */
+}
+
+.cont2, .cont3, .cont4, .cont5, .cont6, .contact p {
+    color : black;
+    font-family: Courier, monospace;
+    font-weight: 200;
+}
+
+.footer {
+    margin-top: 7vh;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-family: Courier, monospace;
+}
+
+/*.cont1  {
+    margin-left: 8vw;
+    margin-top: 10vh;
+}*/
+
+.screen1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Take full screen height */
+    text-align: left; /* Align text to the left */
+    margin-left: 8vw; /* Ensure alignment with other content */
+    width: fit-content; /* Adjust width to content size */
+}
+
+.cont2 {
+    margin-top: 0;
+    padding-top: 5vh;
+}
+
+.cont2, .cont3, .cont4, .cont5, .cont6, .contact{
+    margin-left: 8vw;
+    margin-top: 5vh;
+}
+
+#cursor, #cursor2 {
+    display: inline-block; /* or inline */
+    margin-left: 0.01em;     /* adjust to your liking */
+    animation: pulse 1.0s infinite;
+    transition: opacity 0.3s ease;
+}
+
+  
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    25%, 75% {
+        transform: scale(1.005);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.01);
+        opacity: 0.2;
+    }
+}
+
+/* Container for the icons */
+.icon-container {
+    margin-left: 0;
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+/* Styling for the icon links */
+.icon-link {
+    color: black; /* White icons */
+    text-decoration: none;
+    font-size: 2.5rem; /* Size of the icons */
+    transition: color 0.3s ease;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    padding-top: 0.2rem;
+}
+
+/* Hover effect for the icons */
+#linkedin:hover{
+    color: darkblue; /* Light grey on hover */
+}
+#github:hover{
+    color: purple; /* Light grey on hover */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px 20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    font-family: Courier, monospace;
+    z-index: 1000;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 0;
+    width: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: gray;
+}
+
+* {
+    cursor: none;
+}
+
+/* Custom cursor */
+.custom-cursor {
+    width: 28px;  /* Adjust size as needed */
+    height: 28px;
+    position: fixed;
+    background: url('assets/cursor_icon2.ico') no-repeat center;
+    background-size: cover;
+    pointer-events: none; 
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease-out;
+    z-index: 1000;
+}
+
+/* Keep cursor on clickable elements */
+.custom-cursor.hovering {
+    filter: brightness(1.2); /* Optional effect for hover */
+}
+  

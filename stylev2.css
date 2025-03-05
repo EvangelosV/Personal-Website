@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #444;
+    --link-color: #1a0dab;
+    --font-primary: 'Courier', monospace;
+    --container-width: min(90%, 1200px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.hero {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.subtitle {
+    display: block;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlight {
+    display: block;
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+.fa-linkedin:hover { color: #0a66c2; }
+.fa-github:hover { color: #6e5494; }
+
+.content-section {
+    margin: 3rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.content-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.content-list {
+    list-style: none;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+.content-list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.content-list li::before {
+    content: "▹";
+    position: absolute;
+    left: -1rem;
+    color: var(--secondary-color);
+}
+
+a {
+    color:black;
+}
+
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+}
+
+.cursor {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+    
+    .content-section {
+        padding: 1rem;
+    }
+}
+
+#current-year {
+    font-weight: bold;
+}
