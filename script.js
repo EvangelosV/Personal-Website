@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const href = this.getAttribute('href');
 
             // Allow external links to open normally
-            if (href.startsWith('http')) {
+            if (href.startsWith('http') || href.endsWith('.pdf')) {
                 return; 
             }
 
